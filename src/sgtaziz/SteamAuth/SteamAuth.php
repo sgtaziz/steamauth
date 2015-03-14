@@ -4,7 +4,6 @@ namespace sgtaziz\SteamAuth;
 require_once "Libraries/OpenID.php";
 use LightOpenID;
 use Redirect;
-use SimpleXMLElement;
 
 class SteamAuth
 {
