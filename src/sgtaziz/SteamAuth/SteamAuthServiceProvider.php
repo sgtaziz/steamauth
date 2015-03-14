@@ -6,18 +6,6 @@ use Illuminate\Support\ServiceProvider;
 class SteamAuthServiceProvider extends ServiceProvider
 {
 	/**
-	 * Bootstrap any application services.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->publishes([
-			__DIR__.'/config/steamauth.php' => config_path('steamauth.php'),
-		]);
-	}
-
-	/**
 	 * Register the service provider.
 	 *
 	 * @return void

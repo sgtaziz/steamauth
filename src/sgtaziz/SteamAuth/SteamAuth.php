@@ -1,6 +1,10 @@
 <?php
 namespace sgtaziz\SteamAuth;
 
+require_once "Libraries/OpenID.php";
+use Config;
+use LightOpenID;
+
 class SteamAuth
 {
 	private $OpenIDURL		= 'https://steamcommunity.com/openid';
@@ -8,7 +12,6 @@ class SteamAuth
 
 	public function __construct()
 	{
-		require_once "Libraries/OpenID.php";
 		$this->OpenID = new LightOpenID(url(''));
 	}
 
@@ -31,22 +34,19 @@ class SteamAuth
 
 			if ($steamid64)
 			{
-				$json = file_get_contents('http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' . config('steamauth.SteamAPIKey') . '&steamids=' . $steamid64); 
+				$json = file_get_contents('http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' . Config::get('steamauth.SteamAPIKey') . '&steamids=' . $steamid64); 
 				$json = json_decode($json, true);
 
 				$user = $json["response"]["players"][0];
 
-				if ($user)
-				{
-					return $user;
-				}
+				return $user;
 			}
 		}
 
 		return false;
 	}
 
-	public static function RedirectTo( $url )
+	public static function RedirectTo($url)
 	{
 		header( "Location: $url" ) ;
 		die();
