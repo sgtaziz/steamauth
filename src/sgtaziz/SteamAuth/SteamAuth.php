@@ -1,10 +1,6 @@
 <?php
 namespace sgtaziz\SteamAuth;
 
-require_once "Libraries/OpenID.php";
-use LightOpenID;
-use Redirect;
-
 class SteamAuth
 {
 	private $OpenIDURL		= 'https://steamcommunity.com/openid';
@@ -12,6 +8,7 @@ class SteamAuth
 
 	public function __construct()
 	{
+		require_once "Libraries/OpenID.php";
 		$this->OpenID = new LightOpenID(url(''));
 	}
 
