@@ -1,5 +1,5 @@
 # Installation
-1. Edit your `composer.json` to require `sgtaziz/steamauth": "dev-master"`.
+1. Edit your `composer.json` to require `"sgtaziz/steamauth": "~1.0"`.
 2. Run `composer update` to download and install the package.
 3. Copy `vendor/sgtaziz/steamauth/src/config/steamauth.php` to `config/steamauth.php`.
 4. Edit `steamauth.php` to include your Steam API key.
