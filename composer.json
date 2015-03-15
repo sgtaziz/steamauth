@@ -17,5 +17,10 @@
         "psr-4": {
             "sgtaziz\\SteamAuth\\": "src/sgtaziz/SteamAuth"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x"
+        }
     }
 }
