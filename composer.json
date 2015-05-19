@@ -8,14 +8,20 @@
             "email": "sgtaziz013@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",
         "laravel/framework": "5.0.*"
     },
     "autoload": {
         "psr-4": {
-            "sgtaziz\\SteamAuth\\": "src/sgtaziz/SteamAuth"
+            "sgtaziz\\SteamAuth\\": "src/"
         }
     }
+    "extra": {
+        "component": "package",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
