@@ -1,4 +1,4 @@
-<?php namespace sgtaziz\SteamAuth;
+<?php namespace Sgtaziz\SteamAuth;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,7 +27,7 @@ class SteamAuthServiceProvider extends ServiceProvider
             return new SteamAuth;
         });
 
-        $this->app->alias('sgtaziz.steamauth', 'sgtaziz\SteamAuth\SteamAuth');
+        $this->app->alias('sgtaziz.steamauth', 'Sgtaziz\SteamAuth\SteamAuth');
     }
 
     /**

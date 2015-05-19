@@ -1,4 +1,4 @@
-<?php namespace sgtaziz\SteamAuth\Facades;
+<?php namespace Sgtaziz\SteamAuth\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

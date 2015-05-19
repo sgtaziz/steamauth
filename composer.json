@@ -5,7 +5,7 @@
     "authors": [
         {
             "name": "Aziz Hasanain",
-            "email": "sgtaziz013@gmail.com"
+            "email": "Sgtaziz013@gmail.com"
         }
     ],
     "require": {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "sgtaziz\\SteamAuth\\": "src/"
+            "Sgtaziz\\SteamAuth\\": "src/"
         }
     },
     "extra": {

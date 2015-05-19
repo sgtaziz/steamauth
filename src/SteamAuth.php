@@ -1,7 +1,7 @@
-<?php namespace sgtaziz\SteamAuth;
+<?php namespace Sgtaziz\SteamAuth;
 
 use Config;
-use sgtaziz\SteamAuth\Libraries\LightOpenID;
+use Sgtaziz\SteamAuth\Libraries\LightOpenID;
 
 class SteamAuth
 {
@@ -61,7 +61,7 @@ class SteamAuth
      *
      * @param string $url
      */
-    public static function RedirectTo($url)
+    public function RedirectTo($url)
     {
         header("Location: $url");
 

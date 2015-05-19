@@ -1,4 +1,4 @@
-<?php namespace sgtaziz\SteamAuth\Libraries;
+<?php namespace Sgtaziz\SteamAuth\Libraries;
 
 /**
  * This class provides a simple interface for OpenID 1.1/2.0 authentication.
