@@ -36,7 +36,6 @@ class SteamAuth
         if (!$this->OpenID->mode) {
             $this->OpenID->identity = $this->OpenIDURL;
             $this->OpenID->returnUrl = url('') . $_SERVER['REQUEST_URI'];
-
             $this->RedirectTo($this->OpenID->authUrl());
         } elseif ($this->OpenID->mode == 'cancel') {
             return false;
@@ -44,10 +43,17 @@ class SteamAuth
             $steamid64 = str_replace('http://steamcommunity.com/openid/id/', '', $this->OpenID->identity);
 
             if ($steamid64) {
-                $json = file_get_contents('http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' . Config::get('sgtaziz.steamauth.SteamAPIKey') . '&steamids=' . $steamid64);
+                $url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?';
+                $query = http_build_query([
+                        'key'      => Config::get('sgtaziz.steamauth.SteamAPIKey'),
+                        'steamids' => $steamid64,
+                    ]);
+
+                $json = file_get_contents($url . $query);
                 $json = json_decode($json, true);
 
-                $user = $json["response"]["players"][0];
+                $user = $json['response']['players'][0];
+                $user = json_decode(json_encode($user));
 
                 return $user;
             }
