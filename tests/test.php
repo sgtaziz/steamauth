@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use sgtaziz\SteamAuth\SteamAuth;
+use Sgtaziz\SteamAuth\SteamAuth;
 
 $test = new SteamAuth;
 $test->Auth(url(''));
