@@ -23,7 +23,7 @@ class SteamAuthServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($configPath, 'sgtaziz.steamauth');
         $this->publishes([$configPath => config_path('sgtaziz.steamauth.php')], 'config');
 
-        $this->app->bindShared('sgtaziz.steamauth', function ($app) {
+        $this->app->singleton('sgtaziz.steamauth', function ($app) {
             return new SteamAuth;
         });
 
