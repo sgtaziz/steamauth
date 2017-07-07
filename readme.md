@@ -1,5 +1,5 @@
 # Installation
-1. Edit your `composer.json` to require `"sgtaziz/steamauth": "~1.1"`.
+1. Edit your `composer.json` to require `"sgtaziz/steamauth": "~1.2"`.
 2. Run `composer update` to download and install the package.
 3. Copy `vendor/sgtaziz/steamauth/src/config/steamauth.php` to `config/steamauth.php`.
 4. Edit `steamauth.php` to include your Steam API key.
@@ -43,6 +43,7 @@ SteamAuth::Auth() will also return an associative array with these values:
 6. `gameextrainfo` - The name of the game the user is currently playing
 
 See [this][steamcommunitywiki] for more info.
+
 [steamcommunitywiki]: https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_.28v0002.29
 
 # Note
